@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+  <title>Democrat Poll</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+
+</head>
+
+<body>
+  <div id="container" style="width:300px; height:400px;"></div>
+
+
+<script>
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: '2016 Democratic Presidential Nominations'
+        },
+        xAxis: {
+            categories: ["Hillary Clinton", "Bernie Sanders", "Jim Webb", "Martin O'Malley", "Lincoln Chafee"]
+        },
+        yAxis: {
+            title: {
+                text: 'Points'
+            }
+        },
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+        series: [{
+            name: 'As of May 31, 2015',
+            color: '#033f73',
+            data: [61, 10.8, 2.4, 1.4, 1.4]
+        }]
+    });
+});
+</script>
+
+</body>
+</html>
